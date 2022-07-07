@@ -1,0 +1,109 @@
+* {
+  scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tabler-wrapper table {
+  margin-bottom: 0;
+}
+
+table tr:hover {
+  cursor: pointer;
+}
+
+.tabler-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 50vh;
+}
+
+table thead {
+  position: sticky;
+  top: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.table > :not(:first-child) {
+  border-top: none !important;
+}
+
+.th-svg {
+  position: absolute;
+  top: 14px;
+}
+
+table tfoot {
+  position: sticky;
+  top: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card .card-body {
+  padding: .5rem 1rem;
+}
+
+.card-body p {
+  margin-bottom: 0.5rem;
+}
+
+.table-navigate {
+  margin-bottom: 10px;
+}
+
+.select-wrapper {
+  display: flex;
+}
+
+.input-group__wrapper {
+  padding: 0 20px;
+  flex: 1 1 auto;
+}
+
+.dropdown-menu {
+  position: absolute;
+  inset: 0px 0px auto auto;
+  margin: 0px;
+  transform: translate(0px, 40px);
+}
+
+
+.active-filter__wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: -18px;
+  display: flex;
+}
+
+.active-filter__wrapper .badge {
+  padding: 2px 4px;
+  margin-right: 10px;
+}
+
+.badge .btn-close {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 3px;
+  height: 3px;
+}
+
+.form-modal {
+  padding: 10px;
+  border: 20px solid rgb(117, 104, 121);
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.page-link.page-link--active {
+  background: aliceblue;
+}
