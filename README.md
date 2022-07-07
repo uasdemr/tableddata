@@ -1,6 +1,6 @@
 # Табличные данные
 
-## Это выполненное тестовое задание от компании [Ftutre](https://future-group.ru) на позицию Frontend разработчика.
+## Это выполненное тестовое задание от компании [Future](https://future-group.ru) на позицию Frontend разработчика.
 ---
 *[Текст задания](https://github.com/fugr-ru/frontend-javascript-test)*
 <br />
