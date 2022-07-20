@@ -12,6 +12,8 @@ export const fetchLittleDataAction = createAsyncThunk(
       return data
     } catch (error) {
       // errorHandle(error)
+      console.log(error);
+
     }
   },
 );

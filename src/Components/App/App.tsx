@@ -13,6 +13,7 @@ import { setCurrentPage, setSorting, setSortingRows } from '../../stote/table-sl
 import { Select } from '../Select/Select';
 import { filterByValue } from '../../utils';
 import { AddForm } from '../AddRowForm';
+import { NoItems } from '../NoItems';
 
 function App() {
   const setSort = (evt: React.MouseEvent<HTMLTableCellElement, MouseEvent>) => {
@@ -74,30 +75,34 @@ function App() {
     : uniqUsers.slice(firstUsersIndex, lastUsersIndex)
 
   return (
-    <div className="app container-fluid">
-      {!isDataLoaded && <MySpinner />}
-      <MyNavbar />
-      {isDataLoaded &&
-        <MyTable
-          rows={currentUsers}
-          setSort={setSort}
-          sorting={sorting}
-        />
-      }
-      <div className='table-navigate d-flex flex-column flex-sm-row justify-content-sm-between'>
-        {usersPerPage < uniqUsers.length && <Pagination
-          usersPerPage={usersPerPage}
-          totalRows={uniqUsers.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />}
-        <Select
-          usersPerPage={usersPerPage}
-        />
+    <>
+      {!isDataLoaded ? <MySpinner /> : <div className="app container-fluid position-relative">
+        <MyNavbar />
+        {isDataLoaded ?
+          <MyTable
+            rows={currentUsers}
+            setSort={setSort}
+            sorting={sorting}
+          />
+          :
+          <NoItems />
+        }
+        <div className='table-navigate d-flex flex-column flex-sm-row justify-content-sm-between'>
+          {usersPerPage < uniqUsers.length && <Pagination
+            usersPerPage={usersPerPage}
+            totalRows={uniqUsers.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />}
+          <Select
+            usersPerPage={usersPerPage}
+          />
+        </div>
+        {activeUser && <UserCard user={activeUser} />}
+        {isAddForm && <AddForm />}
       </div>
-      {activeUser && <UserCard user={activeUser} />}
-      {isAddForm && <AddForm />}
-    </div>
+      }
+    </>
   );
 }
 

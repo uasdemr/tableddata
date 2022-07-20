@@ -1,9 +1,18 @@
-
-// Это компонент, когда нет данных для таблицы.
-// Доделать!!!
 const NoItems = () => {
   return (
-    <div>NoItems</div>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        minHeight: '50vh',
+      }}
+    >
+      <h1>
+        No Items
+      </h1>
+    </div>
   )
 }
 
